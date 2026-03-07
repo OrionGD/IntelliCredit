@@ -171,7 +171,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
               poster="https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=1200&h=675"
               controls
             >
-              <source src="demo-video.mp4" type="video/mp4" />
+              <source src="/demo-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             
