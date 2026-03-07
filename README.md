@@ -87,8 +87,12 @@ These are securely ingested into the analysis pipeline.
 
 Documents pass through a **5-stage intelligence pipeline**:
 
-```
-Ingestion → Parsing → Correlation → Modeling → Decision Generation
+```mermaid
+flowchart LR
+    A[Ingestion] --> B[Parsing]
+    B --> C[Correlation]
+    C --> D[Modeling]
+    D --> E[Decision Generation]
 ```
 
 Each stage runs in real time and provides progress tracking.
