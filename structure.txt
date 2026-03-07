@@ -1,0 +1,105 @@
+# IntelliCredit Platform Analysis
+
+## 1. System Overview
+IntelliCredit is an enterprise-grade, AI-powered corporate credit intelligence platform designed for banks and financial institutions. It replaces manual, slow, and error-prone credit analysis with an automated, multi-dimensional intelligence system.
+
+### Purpose
+- **Automate Risk Assessment**: Process complex financial documents in seconds.
+- **Deep Signal Detection**: Identify non-linear risks hidden in unstructured data.
+- **Institutional Trust**: Provide explainable AI (XAI) with full audit trails for credit decisions.
+
+### High-Level Architecture
+- **Frontend**: Built with React 18+, TypeScript, and Tailwind CSS. Uses `motion/react` for sophisticated animations and `recharts` for data visualization.
+- **Intelligence Layer**: 10 specialized AI modules that process data in parallel.
+- **Data Layer**: Connectors for GST, Bank Statements, Tax Returns, Legal Records, and Market Sentiment.
+- **Security**: AES-256 encryption and SOC2 compliance-ready architecture.
+
+---
+
+## 2. User Workflow (Credit Officer)
+1. **System Initialization**: Professional boot sequence (`SystemLoader`) ensures all intelligence modules are online.
+2. **Landing Page**: High-level overview of platform capabilities and "See in Action" video demo.
+3. **Portfolio Management**: Monitor the entire loan book and active applications in the `Portfolio` view.
+4. **Application Intake**: Upload company documents (GST, Bank Statements) in the `Intake` page.
+5. **AI Analysis Pipeline**: Real-time tracking of the 5-stage analysis process (Ingestion -> Parsing -> Correlation -> Modeling -> Decision Generation).
+6. **Credit Dashboard**: Review the summarized "Risk Snapshot" and AI-generated recommendation (Approve/Reject).
+7. **Risk Deep-Dive**: Use the `Risk Explorer` to analyze the Financial Stability Radar, Revenue Trends, and Sector Sentiment.
+8. **Module Monitoring**: Check the `AI Module Monitor` for specific insights from the 10 specialized engines.
+9. **Decision Workbench**: Finalize the loan decision, set conditions, and generate the formal Credit Memo.
+
+---
+
+## 3. Page-by-Page Analysis
+
+### Landing Page
+- **Purpose**: Brand positioning and platform introduction.
+- **Key Elements**: Hero section with "Next-Gen Decision Intelligence", Video Demo, Core Modules grid, and Business Impact metrics.
+- **Interactivity**: Smooth scroll navigation, hover-active module cards, and CTA buttons.
+
+### Portfolio / Portfolio Analytics
+- **Purpose**: Centralized management of all loan applications.
+- **Key Elements**: Analytics cards (Total Exposure, Avg Risk Score), searchable application list with status badges (Ready, Analyzing, Approved, Rejected).
+- **Interactivity**: Search/Filter functionality, deep-linking to specific company dashboards.
+
+### Application Intake
+- **Purpose**: Secure document ingestion and analysis triggering.
+- **Key Elements**: Drag-and-drop upload area, file list with metadata, and a vertical "Analysis Pipeline" stepper.
+- **Interactivity**: File upload simulation, real-time progress tracking through analysis stages.
+
+### Credit Dashboard
+- **Purpose**: Executive summary of a specific credit application.
+- **Key Elements**: Overall Risk Score (0-100), AI Recommendation card (Approve/Reject/Review), Risk Snapshot bars, and AI Discovered Insights.
+- **Interactivity**: Quick-action buttons to finalize decisions or open the Risk Explorer.
+
+### Risk Explorer
+- **Purpose**: Detailed analytical deep-dive into company performance.
+- **Key Elements**: 
+    - **Financial Stability Radar**: Multi-axis comparison (Liquidity, Solvency, etc.) against industry peers.
+    - **Revenue Trend**: Line chart comparing company revenue vs. peer average.
+    - **Cash Flow Velocity**: Area chart showing daily transaction speed.
+    - **Scenario Simulator**: Interactive "What-if" tool to see how changes in revenue or debt impact the risk score.
+- **Interactivity**: Chart tooltips, interactive simulator sliders, and "Compare Companies" toggle.
+
+### AI Module Monitor
+- **Purpose**: Transparency and health monitoring of the AI engines.
+- **Key Elements**: Status grid of the 10 AI modules, real-time "Insight" snippets, and System Health panels.
+- **Interactivity**: Real-time status indicators (Active/Idle), audit log timeline.
+
+### Decision Workbench
+- **Purpose**: Finalizing the credit decision and generating documentation.
+- **Key Elements**: AI Recommendation summary, Key Decision Drivers (weighted), Suggested Loan Conditions, and Credit Memo preview.
+- **Interactivity**: Decision selection (Approve/Reject/Review), notes input, and report export controls.
+
+---
+
+## 4. Feature-Level Analysis (AI Modules)
+
+### Core AI Engines
+1. **Digital Twin Stress Tester**: Simulates 10,000+ economic scenarios to test business resilience.
+2. **GST Time Series Oracle**: Forecasts revenue and tax compliance using deep learning.
+3. **Network Contagion Scoring**: Maps systemic risks from supplier/buyer dependencies.
+4. **UPI Cash Velocity Engine**: Analyzes real-time transaction speed and liquidity.
+5. **Management DNA Profiler**: Evaluates leadership integrity and behavioral patterns.
+6. **Economic Sentiment Analyzer**: NLP-based macro-risk detection from news and reports.
+
+### Specialized UX Features
+- **Financial Stability Radar**: Visualizes multi-dimensional risk on a single polar chart.
+- **Explainable AI (XAI)**: Every score is accompanied by a "Confidence Level" and "Evidence Trace" panel.
+- **Scenario Switcher**: Allows users to toggle between different economic "worlds" (e.g., Recession, Growth) to see impact on risk.
+- **Command Palette**: `Cmd+K` interface for rapid navigation and company search.
+
+---
+
+## 5. Visual & Interaction Analysis
+- **Color Palette**: Sage & Forest theme (`#E5E9DE`, `#1D4128`, `#869E2F`, `#5F6F50`) conveying stability and growth.
+- **Typography**: Inter (Sans-serif) for high legibility and professional feel.
+- **Animations**: Subtle `y-axis` entrance animations and `AnimatePresence` for smooth page transitions.
+- **Data Viz**: Clean, minimal charts with custom tooltips and institutional-grade styling.
+
+---
+
+## 6. System Flow Diagram (Textual)
+[Data Ingestion] -> [Parsing Engine] -> [AI Risk Modules] -> [Risk Scoring] -> [Decision Workbench]
+      ^                  ^                 ^                 ^                  |
+      |                  |                 |                 |                  v
+[GST/Bank/News]    [OCR/NLP]         [Parallel Analysis]  [Explainable AI]   [Credit Memo]
