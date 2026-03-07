@@ -166,14 +166,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
         
         <div className="relative max-w-[1000px] mx-auto group">
           <div className="relative aspect-video bg-forest-text/5 rounded-[40px] overflow-hidden shadow-2xl border border-forest-text/5">
-            <video 
-              className="w-full h-full object-cover"
-              poster="https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=1200&h=675"
-              controls
-            >
-              <source src="https://player.cloudinary.com/embed/?cloud_name=dhpwd7uta&public_id=demo-video_m5cofq" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dhpwd7uta&public_id=demo-video_m5cofq"
+  className="w-full h-full"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowFullScreen
+></iframe>
             
             {/* Play Button Overlay (Visual only, video controls handle actual play) */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-500">
@@ -186,7 +184,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           {/* Decorative elements around video */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-moss-accent/5 rounded-full blur-3xl -z-10" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-forest-text/5 rounded-full blur-3xl -z-10" />
-        </div>---
+        </div>
       </section>
 
       {/* 2. Platform Overview */}
