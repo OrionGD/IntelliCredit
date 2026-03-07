@@ -171,7 +171,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
               poster="https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=1200&h=675"
               controls
             >
-              <source src="assets/demo-video.mp4" type="video/mp4" />
+              <source src="demo-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             
@@ -186,7 +186,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           {/* Decorative elements around video */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-moss-accent/5 rounded-full blur-3xl -z-10" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-forest-text/5 rounded-full blur-3xl -z-10" />
-        </div>
+        </div>---
       </section>
 
       {/* 2. Platform Overview */}
