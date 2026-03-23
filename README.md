@@ -1,6 +1,16 @@
 
 # IntelliCredit — AI Corporate Credit Intelligence Platform
-
+![Project Status](https://img.shields.io/badge/Status-Prototype%20Deployment-success) 
+![Platform](https://img.shields.io/badge/Platform-FinTech%20Credit%20Intelligence-darkgreen)
+![AI Powered](https://img.shields.io/badge/AI-Decision%20Intelligence-purple)
+![Frontend](https://img.shields.io/badge/Frontend-React%2018%2B-61DAFB)
+![Language](https://img.shields.io/badge/Language-TypeScript-blue)
+![Styling](https://img.shields.io/badge/UI-TailwindCSS-38BDF8)
+![Visualization](https://img.shields.io/badge/Data%20Viz-Recharts-orange)
+![Architecture](https://img.shields.io/badge/Architecture-AI%20Risk%20Engines-darkred)
+![Security](https://img.shields.io/badge/Security-AES--256%20Ready-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+---
 **IntelliCredit** is an enterprise-grade AI platform designed to modernize how banks and financial institutions evaluate corporate credit risk.
 
 Traditional credit underwriting relies heavily on manual financial statement analysis, fragmented data sources, and subjective judgment. IntelliCredit replaces this with a **fully automated, explainable, multi-dimensional intelligence system** capable of analyzing structured and unstructured financial data in seconds.

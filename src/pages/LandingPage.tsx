@@ -1,16 +1,18 @@
 import React from 'react';
+import Footer from "./Footer";
+import { DemoForm } from "../components/shared/DemoForm";
 import { motion } from 'motion/react';
-import { 
-  ArrowRight, 
-  ShieldCheck, 
-  Network, 
-  Zap, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  LineChart, 
-  Activity, 
-  Users, 
+import {
+  ArrowRight,
+  ShieldCheck,
+  Network,
+  Zap,
+  BarChart3,
+  Cpu,
+  Database,
+  LineChart,
+  Activity,
+  Users,
   Globe,
   CheckCircle2,
   ChevronRight,
@@ -24,58 +26,58 @@ interface LandingPageProps {
 }
 
 const modules = [
-  { 
-    title: "Digital Twin Stress Tester", 
+  {
+    title: "Digital Twin Stress Tester",
     desc: "Simulates 10,000+ economic scenarios to stress-test business resilience and solvency under extreme market conditions.",
     icon: Activity
   },
-  { 
-    title: "GST Time Series Oracle", 
+  {
+    title: "GST Time Series Oracle",
     desc: "Advanced forecasting of future revenue trends and tax compliance from historical filings using deep learning.",
     icon: LineChart
   },
-  { 
-    title: "Network Contagion Scoring", 
+  {
+    title: "Network Contagion Scoring",
     desc: "Maps systemic risks from supplier and buyer dependencies using graph intelligence and propagation models.",
     icon: Network
   },
-  { 
-    title: "UPI Cash Velocity Engine", 
+  {
+    title: "UPI Cash Velocity Engine",
     desc: "Real-time analysis of transaction speed and liquidity patterns across digital payment channels.",
     icon: Zap
   },
-  { 
-    title: "Management DNA Profiler", 
+  {
+    title: "Management DNA Profiler",
     desc: "Proprietary evaluation of leadership integrity, track record, and decision-making patterns using behavioral AI.",
     icon: Users
   },
-  { 
-    title: "Economic Sentiment Analyzer", 
+  {
+    title: "Economic Sentiment Analyzer",
     desc: "Natural language processing of news, reports, and sector signals for macro-risk detection and early warning.",
     icon: Globe
   }
 ];
 
 const capabilities = [
-  { 
-    icon: ShieldCheck, 
-    title: "Financial Data Intelligence", 
-    desc: "Automated anomaly detection and deep-dive analysis of financial statements and regulatory filings." 
+  {
+    icon: ShieldCheck,
+    title: "Financial Data Intelligence",
+    desc: "Automated anomaly detection and deep-dive analysis of financial statements and regulatory filings."
   },
-  { 
-    icon: Network, 
-    title: "Business Network Risk", 
-    desc: "Comprehensive mapping of supply chain and counterparty risks to prevent contagion effects." 
+  {
+    icon: Network,
+    title: "Business Network Risk",
+    desc: "Comprehensive mapping of supply chain and counterparty risks to prevent contagion effects."
   },
-  { 
-    icon: Zap, 
-    title: "Cash Flow Monitoring", 
-    desc: "Continuous surveillance of operational cash flows and liquidity buffers for early warning signals." 
+  {
+    icon: Zap,
+    title: "Cash Flow Monitoring",
+    desc: "Continuous surveillance of operational cash flows and liquidity buffers for early warning signals."
   },
-  { 
-    icon: BarChart3, 
-    title: "Market Sentiment Analysis", 
-    desc: "Real-time tracking of sector-wide trends and external economic factors impacting creditworthiness." 
+  {
+    icon: BarChart3,
+    title: "Market Sentiment Analysis",
+    desc: "Real-time tracking of sector-wide trends and external economic factors impacting creditworthiness."
   }
 ];
 
@@ -93,9 +95,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
       <nav className="fixed top-0 w-full z-50 bg-sage-bg/90 backdrop-blur-md border-b border-forest-text/5 px-6 lg:px-12 py-5">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img 
-              src="assets/logo.png" 
-              alt="IntelliCredit Logo" 
+            <img
+              src="assets/logo.png"
+              alt="IntelliCredit Logo"
               className="w-9 h-9 object-contain"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://upload.wikimedia.org/wikipedia/commons/1/1f/IntelliCredit.png";
@@ -107,7 +109,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
             <a href="#overview" className="hover:text-forest-text transition-colors">Platform</a>
             <a href="#modules" className="hover:text-forest-text transition-colors">Intelligence</a>
             <a href="#capabilities" className="hover:text-forest-text transition-colors">Capabilities</a>
-            <button 
+            <button
               onClick={onStart}
               className="bg-forest-text text-sage-bg px-6 py-2.5 rounded-lg hover:opacity-95 transition-all shadow-lg shadow-forest-text/10"
             >
@@ -118,8 +120,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
       </nav>
 
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="max-w-4xl">
+      <section className="relative pt-32 pb-24 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 min-h-screen">
+        <div className="w-full lg:w-[50%] flex-shrink-0 z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -129,63 +131,49 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
               <Cpu size={14} />
               <span>Enterprise Credit Intelligence</span>
             </div>
-            <h1 className="text-6xl lg:text-8xl font-bold tracking-tight mb-8 leading-[0.95]">
+            <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-8 leading-[0.95]">
               Next-Gen <br />
               <span className="text-moss-accent italic font-serif">Decision Intelligence</span>
             </h1>
-            <p className="text-2xl text-olive-detail max-w-2xl mb-10 leading-relaxed font-light">
+            <p className="text-xl lg:text-2xl text-olive-detail max-w-xl mb-10 leading-relaxed font-light">
               IntelliCredit transforms corporate lending with institutional-grade AI. Automate complex risk analysis, detect systemic signals, and drive faster, data-backed credit decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <button 
+              <button
                 onClick={onStart}
-                className="btn-primary text-xl px-10 py-5 flex items-center justify-center gap-3 group shadow-xl shadow-forest-text/20"
+                className="btn-primary text-lg lg:text-xl px-8 lg:px-10 py-5 flex items-center justify-center gap-3 group shadow-xl shadow-forest-text/20"
               >
                 Start Credit Analysis
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-secondary text-xl px-10 py-5 flex items-center justify-center gap-3">
+              <button className="btn-secondary text-lg lg:text-xl px-8 lg:px-10 py-5 flex items-center justify-center gap-3">
                 Explore Platform
               </button>
             </div>
           </motion.div>
         </div>
-        
-        {/* Subtle Background Element */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-2/3 bg-gradient-to-l from-moss-accent/5 to-transparent pointer-events-none blur-3xl rounded-full" />
-      </section>
 
-      {/* 1.5 Video Demo Section */}
-      <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto text-center border-t border-forest-text/5">
-        <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight">See IntelliCredit in Action</h2>
-          <p className="text-xl text-olive-detail font-light leading-relaxed">
-            Experience how our AI-powered platform transforms corporate credit analysis with real-time intelligence and automated decisioning.
-          </p>
-        </div>
-        
-        <div className="relative max-w-[1000px] mx-auto group">
-          <div className="relative aspect-video bg-forest-text/5 rounded-[40px] overflow-hidden shadow-2xl border border-forest-text/5">
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dhpwd7uta&public_id=demo-video_m5cofq"
-  className="w-full h-full"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowFullScreen
-></iframe>
-            
-            {/* Play Button Overlay (Visual only, video controls handle actual play) */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-500">
-               <div className="w-24 h-24 bg-moss-accent/90 text-sage-bg rounded-full flex items-center justify-center shadow-2xl backdrop-blur-sm">
-                 <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-current border-b-[14px] border-b-transparent ml-2" />
-               </div>
-            </div>
+        {/* Right Column: Demo Video */}
+        <div className="w-full lg:w-1/2 flex-shrink-0 relative group">
+          <div className="relative aspect-video bg-forest-text/5 rounded-[40px] overflow-hidden shadow-2xl border border-forest-text/5 group-hover:shadow-forest-text/10 transition-all duration-300">
+            <iframe
+              src="https://player.cloudinary.com/embed/?cloud_name=dhpwd7uta&public_id=demo-video_m5cofq"
+              className="w-full h-full"
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
-          
           {/* Decorative elements around video */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-moss-accent/5 rounded-full blur-3xl -z-10" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-forest-text/5 rounded-full blur-3xl -z-10" />
         </div>
+
+
+        {/* Subtle Background Element */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-2/3 bg-gradient-to-l from-moss-accent/5 to-transparent pointer-events-none blur-3xl rounded-full" />
       </section>
+
+      {/* Video Demo Section Moved to Hero */}
 
       {/* 2. Platform Overview */}
       <section id="overview" className="py-32 bg-white/40 border-y border-forest-text/5">
@@ -252,7 +240,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {modules.map((module, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ y: -8 }}
               className="p-10 bg-white border border-forest-text/5 rounded-[40px] hover:shadow-2xl hover:shadow-forest-text/5 transition-all group"
@@ -278,7 +266,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
               A structured approach to transforming raw data into actionable lending decisions.
             </p>
           </div>
-          
+
           <div className="flex flex-col lg:flex-row justify-between items-start gap-16 lg:gap-8">
             {[
               { step: "01", label: "Data Ingestion", desc: "Consolidating financial, operational, and market data from 50+ sources." },
@@ -324,7 +312,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
             <p className="text-xl text-olive-detail leading-relaxed mb-12 font-light">
               Our platform goes beyond balance sheets. We analyze the entire ecosystem surrounding a business to identify risks that traditional models overlook.
             </p>
-            <button 
+            <button
               onClick={onStart}
               className="btn-primary flex items-center gap-3 group text-lg px-8 py-4"
             >
@@ -384,7 +372,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
       </section>
 
       {/* 8. Call To Action */}
-      <section className="py-48 px-6 lg:px-12 text-center">
+      <section className="pt-32 pb-24 px-6 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -395,101 +383,26 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           <p className="text-2xl text-olive-detail mb-16 max-w-2xl mx-auto font-light leading-relaxed">
             Join leading financial institutions using IntelliCredit to drive faster, safer, and more profitable lending.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button 
-              onClick={onStart}
-              className="btn-primary text-2xl px-14 py-6 shadow-2xl shadow-forest-text/20"
-            >
-              Open IntelliCredit Platform
-            </button>
-            <button className="btn-secondary text-2xl px-14 py-6">
-              Schedule a Demo
-            </button>
+          <div className="flex flex-col lg:flex-row gap-12 justify-center items-center mt-12 w-full">
+            <div className="flex flex-col gap-6 text-left max-w-sm">
+              <h3 className="text-3xl font-bold tracking-tight">Prefer a guided walkthrough?</h3>
+              <p className="text-olive-detail leading-relaxed">Schedule a personalized 1-on-1 session with our product experts to see how IntelliCredit handles complex financial modeling.</p>
+              <button
+                onClick={onStart}
+                className="btn-primary text-xl px-10 py-5 w-fit shadow-2xl shadow-forest-text/20 mt-4"
+              >
+                Access Platform Instantly
+              </button>
+            </div>
+            <div className="w-full max-w-md">
+              <DemoForm />
+            </div>
           </div>
         </motion.div>
       </section>
 
-    {/* 9. Professional Footer */}
-<footer className="py-24 border-t border-forest-text/10 px-6 lg:px-12 bg-white/30">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-      
-      <div className="col-span-1 lg:col-span-1">
-        <div className="flex items-center gap-3 mb-8">
-          <img 
-            src="assets/logo.png" 
-            alt="Logo" 
-            className="w-8 h-8 object-contain"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "https://upload.wikimedia.org/wikipedia/commons/1/1f/IntelliCredit.png";
-            }}
-          />
-          <span className="font-bold text-2xl tracking-tight">IntelliCredit</span>
-        </div>
-
-        <p className="text-sm text-olive-detail leading-relaxed font-medium">
-          IntelliCredit is an AI-powered decision intelligence platform designed
-          for banks and financial institutions. It analyzes financial data,
-          business activity, and market signals to help lenders make faster,
-          smarter, and more reliable corporate credit decisions.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="font-bold mb-8 uppercase text-xs tracking-[0.2em] text-forest-text/40">
-          Platform
-        </h4>
-        <ul className="space-y-5 text-sm font-semibold text-olive-detail">
-          <li><a href="#" className="hover:text-forest-text transition-colors">AI Risk Intelligence Engine</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Credit Decision Modules</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Financial Data Connectors</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Compliance & Audit Monitoring</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Enterprise Security</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 className="font-bold mb-8 uppercase text-xs tracking-[0.2em] text-forest-text/40">
-          Company
-        </h4>
-        <ul className="space-y-5 text-sm font-semibold text-olive-detail">
-          <li><a href="#" className="hover:text-forest-text transition-colors">About IntelliCredit</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">AI Research</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Technology & Innovation</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Careers</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Contact</a></li>
-          <li><a href="#" className="hover:text-forest-text transition-colors">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 className="font-bold mb-8 uppercase text-xs tracking-[0.2em] text-forest-text/40">
-          Contact
-        </h4>
-        <ul className="space-y-5 text-sm font-semibold text-olive-detail">
-          <li>Email</li>
-          <li>swizztek.teams@gmail.com</li>
-          <li>Address</li>
-          <li>KRCT, Tiruchirappalli</li>
-          <li>Tamil Nadu, India</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div className="flex flex-col md:flex-row justify-between items-center pt-16 border-t border-forest-text/5 gap-8">
-      <p className="text-xs text-olive-detail/50 uppercase tracking-[0.2em] font-bold">
-        © 2026 IntelliCredit AI. Enterprise Decision Intelligence Platform.
-      </p>
-
-      <div className="flex gap-10 text-xs text-olive-detail/50 uppercase tracking-[0.2em] font-bold">
-        <a href="#" className="hover:text-forest-text transition-colors">Terms</a>
-        <a href="#" className="hover:text-forest-text transition-colors">Privacy</a>
-        <a href="#" className="hover:text-forest-text transition-colors">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>
+      {/* 9. Professional Footer */}
+      <Footer />
     </div>
   );
 };
